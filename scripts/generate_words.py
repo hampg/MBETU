@@ -35,8 +35,6 @@ rounded=[x for x in rounded if x not in back2]
 # Ezek a vegyes hangrendűek a megszokott elülső ragot kapják.
 front += group('film cím sín szín kén szén')
 back2=[x for x in back2 if x not in ['film','cím','sín']]
-for n in ['ajándék','játék','szándék','árnyék']:
-    if n in back: back.remove(n);front.append(n)
 # -val/-vel; a hosszú mássalhangzók írása az egyszerűsítő írásmódot követi.
 for nouns,suf in [(back+back2,'al'),(front+rounded,'el')]:
     for n in nouns:
@@ -153,7 +151,7 @@ for word,cat,reason in [
 for w in list(rows):
     if any(x in w for x in ['állatállomány','tettvágy']):del rows[w]
 # A tőben meglévő törvény a toldalékolt alakban is megmarad.
-base_laws={'szabadság':('fusion','A szabadság tövében a d és az s cs-vé olvad össze.'),'igazság':('unwritten','Az igazság tövében a z és az s hosszú s-ként hangzik.'),'barátság':('fusion','A barátság tövében a t és az s hosszú cs-vé olvad össze.')}
+base_laws={'szárazság':('unwritten','A szárazság tövében a z és az s a szokásos ejtésben hosszú s-ként hangzik.'),'szabadság':('fusion','A szabadság tövében a d és az s cs-vé olvad össze.'),'igazság':('unwritten','Az igazság tövében a z és az s hosszú s-ként hangzik.'),'barátság':('fusion','A barátság tövében a t és az s hosszú cs-vé olvad össze.')}
 for r in rows.values():
     if r['family'] in base_laws and r['word']!=r['family']:
         c,ex=base_laws[r['family']]

@@ -17,7 +17,7 @@ ajtó	["none"]	{"none": "A szóban a játék hat mássalhangzó-változása köz
 ajándékba	["partial"]	{"partial": "A(z) ajándék + -ba határán az első zörejhang zöngéssége a következő mássalhangzóhoz igazodik. Ez zöngésség szerinti részleges hasonulás, az írás nem jelöli."}	ajándék
 ajándékban	["partial"]	{"partial": "A(z) ajándék + -ban határán az első zörejhang zöngéssége a következő mássalhangzóhoz igazodik. Ez zöngésség szerinti részleges hasonulás, az írás nem jelöli."}	ajándék
 ajándékból	["partial"]	{"partial": "A(z) ajándék + -ból határán az első zörejhang zöngéssége a következő mássalhangzóhoz igazodik. Ez zöngésség szerinti részleges hasonulás, az írás nem jelöli."}	ajándék
-ajándékkel	["written"]	{"written": "A(z) ajándék + -vel kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	ajándék
+ajándékkal	["written"]	{"written": "A(z) ajándék + -val kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	ajándék
 akadj	["fusion"]	{"fusion": "A(z) akad + -j kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	akad
 akadjak	["fusion"]	{"fusion": "A(z) akad + -jak kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	akad
 akadjanak	["fusion"]	{"fusion": "A(z) akad + -janak kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	akad
@@ -899,7 +899,7 @@ javítják	["fusion"]	{"fusion": "A(z) javít + -ják határán a t és a j a ki
 javítjátok	["fusion"]	{"fusion": "A(z) javít + -játok határán a t és a j a kiejtésben ty hanggá olvad össze. A hang hossza a környezettől függ; az írás megőrzi a szóelemeket."}	javít
 jobbra	["shortening"]	{"shortening": "A jobb + -ra alakban a hosszú b az r mellett rövidül: jobra."}	jobbra
 játék	["none"]	{"none": "A szóban a játék hat mássalhangzó-változása közül egyik sem figyelhető meg. A hangokat a szokásos alakjukban ejtjük; az eleve hosszú hang nem hasonulás."}	játék
-játékkel	["written"]	{"written": "A(z) játék + -vel kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	játék
+játékkal	["written"]	{"written": "A(z) játék + -val kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	játék
 jéggel	["written"]	{"written": "A(z) jég + -vel kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	jég
 jéghez	["partial"]	{"partial": "A(z) jég + -hez határán az első zörejhang zöngéssége a következő mássalhangzóhoz igazodik. Ez zöngésség szerinti részleges hasonulás, az írás nem jelöli."}	jég
 jégként	["partial"]	{"partial": "A(z) jég + -ként határán az első zörejhang zöngéssége a következő mássalhangzóhoz igazodik. Ez zöngésség szerinti részleges hasonulás, az írás nem jelöli."}	jég
@@ -1831,14 +1831,14 @@ számítja	["fusion"]	{"fusion": "A(z) számít + -ja határán a t és a j a ki
 számítjuk	["fusion"]	{"fusion": "A(z) számít + -juk határán a t és a j a kiejtésben ty hanggá olvad össze. A hang hossza a környezettől függ; az írás megőrzi a szóelemeket."}	számít
 számítják	["fusion"]	{"fusion": "A(z) számít + -ják határán a t és a j a kiejtésben ty hanggá olvad össze. A hang hossza a környezettől függ; az írás megőrzi a szóelemeket."}	számít
 számítjátok	["fusion"]	{"fusion": "A(z) számít + -játok határán a t és a j a kiejtésben ty hanggá olvad össze. A hang hossza a környezettől függ; az írás megőrzi a szóelemeket."}	számít
-szándékkel	["written"]	{"written": "A(z) szándék + -vel kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	szándék
+szándékkal	["written"]	{"written": "A(z) szándék + -val kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	szándék
 száradj	["fusion"]	{"fusion": "A(z) szárad + -j kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	szárad
 száradjak	["fusion"]	{"fusion": "A(z) szárad + -jak kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	szárad
 száradjanak	["fusion"]	{"fusion": "A(z) szárad + -janak kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	szárad
 száradjatok	["fusion"]	{"fusion": "A(z) szárad + -jatok kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	szárad
 száradjon	["fusion"]	{"fusion": "A(z) szárad + -jon kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	szárad
 száradjunk	["fusion"]	{"fusion": "A(z) szárad + -junk kapcsolatban a d és a j gy hanggá olvad össze a kiejtésben; írásban mindkét szóelemet megőrizzük."}	szárad
-szárazsággal	["written"]	{"written": "A(z) szárazság + -val kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	szárazság
+szárazsággal	["written", "unwritten"]	{"written": "A(z) szárazság + -val kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja.", "unwritten": "A szárazság tövében a z és az s a szokásos ejtésben hosszú s-ként hangzik."}	szárazság
 szárnyalj	["unwritten"]	{"unwritten": "A(z) szárnyal + -j kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	szárnyal
 szárnyaljanak	["unwritten"]	{"unwritten": "A(z) szárnyal + -janak kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	szárnyal
 szárnyaljatok	["unwritten"]	{"unwritten": "A(z) szárnyal + -jatok kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	szárnyal
@@ -2424,7 +2424,7 @@ zöldítjük	["fusion"]	{"fusion": "A(z) zöldít + -jük határán a t és a j 
 áramoljatok	["unwritten"]	{"unwritten": "A(z) áramol + -jatok kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	áramol
 áramoljon	["unwritten"]	{"unwritten": "A(z) áramol + -jon kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	áramol
 áramoljunk	["unwritten"]	{"unwritten": "A(z) áramol + -junk kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	áramol
-árnyékkel	["written"]	{"written": "A(z) árnyék + -vel kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	árnyék
+árnyékkal	["written"]	{"written": "A(z) árnyék + -val kapcsolatban a rag v-je a tő utolsó mássalhangzójához hasonul; ezt az írás is mutatja."}	árnyék
 árulj	["unwritten"]	{"unwritten": "A(z) árul + -j kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	árul
 árulja	["unwritten"]	{"unwritten": "A(z) árul + -ja kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	árul
 áruljanak	["unwritten"]	{"unwritten": "A(z) árul + -janak kapcsolatban az l és a j találkozásakor a szokásos köznyelvi ejtésben hosszú j hallatszik. Ez írásban jelöletlen teljes hasonulás."}	árul

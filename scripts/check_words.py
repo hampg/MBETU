@@ -14,9 +14,9 @@ for w in words:
     counts.update(w['answers'])
 for cat in ids:assert counts[cat]>=40,(cat,counts[cat])
 index={w['word']:w for w in words}
-anchors={'színpad':'partial','népdal':'partial','háztól':'partial','vízzel':'written','anyja':'unwritten','egészség':'unwritten','barátság':'fusion','látja':'fusion','jobbra':'shortening','otthon':'shortening','mondta':'deletion','gondnak':'deletion','alma':'none','toll':'none'}
+anchors={'színpad':'partial','népdal':'partial','háztól':'partial','vízzel':'written','anyja':'unwritten','egészség':'unwritten','barátság':'fusion','látja':'fusion','jobbra':'shortening','otthon':'shortening','mondta':'deletion','gondnak':'deletion','alma':'none','toll':'none','ajándékkal':'written','játékkal':'written','szándékkal':'written','árnyékkal':'written','kulccsal':'written'}
 for word,cat in anchors.items():assert cat in index[word]['answers'],word
-for bad in ['játék}+','játékkalal','képban','ködhez','szándékkalal','fogyja','fagyja','alakulják']:
+for bad in ['játék}+','játékkalal','képban','ködhez','szándékkalal','fogyja','fagyja','alakulják','ajándékkel','játékkel','szándékkel','árnyékkel']:
     assert bad not in index,bad
 page=(ROOT/'index.html').read_text()
 embedded=re.search(r'<script id="word-data" type="application/json">(.*?)</script>',page,re.S)
