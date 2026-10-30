@@ -15,7 +15,7 @@ $('boxes').innerHTML=RULES.map((r,i)=>`<div class="box-wrap ${r.color}" data-rul
 $('help-toc').innerHTML=RULES.map((r,i)=>`<a href="#szabaly-${r.id}">0${i+1} ${esc(r.name)}</a>`).join('');
 $('rules-content').innerHTML=RULES.map((r,i)=>`<article class="rule-article" id="szabaly-${r.id}"><span class="rule-index">0${i+1}</span><div><h2>${esc(r.name)}</h2><p class="rule-tip">${esc(r.tip)}</p><p>${esc(r.body)}</p><p>${esc(r.detail)}</p></div><div class="rule-examples"><p>ÍRJUK → EJTJÜK / ALAKÍTJUK</p>${r.examples.map(e=>`<div class="example-row"><div class="example-change"><span>${esc(e[0])}</span><span class="arrow">→</span><strong>${esc(e[1])}</strong></div><p>${esc(e[2])}</p></div>`).join('')}<p class="rule-source"><a href="https://helyesiras.mta.hu/helyesiras/default/akh12" target="_blank" rel="noopener noreferrer">Forrás: ${esc(r.source)} ↗</a></p></div></article>`).join('');
 $('sources-list').innerHTML=SOURCES.map(s=>`<div class="source-link"><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><p>${esc(s.note)}</p></div>`).join('');
-$('word-count').textContent=`${fmt(words.length)} SZÓALAK · 6 SZABÁLY · VÉGTELEN AHA!`;
+$('word-count').textContent=`${fmt(words.length)} SZÓALAK · 6 SZABÁLY`;
 $('wordbank-detail').textContent=`A szóbank ${fmt(words.length)} különböző szóalakot tartalmaz, ${fmt(new Set(words.map(w=>w.family)).size)} szócsaládba rendezve. A szám ragozott alakokat is tartalmaz, nem ennyi külön szótövet jelent.`;
 function selected(target){return Array.from($(target).querySelectorAll('input:checked'),e=>e.value);}
 function available(selectedIds){return words.filter(w=>w.answers.some(c=>selectedIds.includes(c))).length;}
