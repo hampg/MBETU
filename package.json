@@ -1,0 +1,1 @@
+{"name":"mbetu","version":"1.0.0","private":true,"scripts":{"build":"python3 scripts/build.py","test":"node tests/core.test.cjs && python3 scripts/check_words.py","start":"python3 -m http.server 4173"}}
