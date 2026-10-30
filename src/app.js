@@ -5,13 +5,24 @@ const words=JSON.parse($('word-data').textContent), allRules=[...RULES,NONE], id
 const rule=id=>allRules.find(r=>r.id===id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>n.toLocaleString('hu-HU');
+// Original geometric marks: hard cuts and uniform, heavy construction.
+const iconPaths={
+ partial:'<path d="M54 8A52 52 0 0 0 54 112V8Z"/><path d="M68 8V27A34 34 0 0 1 68 93V112A52 52 0 0 0 68 8Z"/>',
+ written:'<path d="M8 60 45 20H70L42 49H84V71H42L70 100H45Z"/><path d="M112 60 75 20H50L78 49H36V71H78L50 100H75Z" fill-rule="evenodd"/>',
+ unwritten:'<path d="M12 20H104L86 40H12ZM12 50H104L86 70H12ZM12 80H104L86 100H12Z"/>',
+ fusion:'<path d="M49 4H71V34L92 13 108 29 87 50H116V72H87L108 93 92 109 71 88V118H49V88L28 109 12 93 33 72H4V50H33L12 29 28 13 49 34Z"/>',
+ shortening:'<path d="M4 45H51V18L94 60 51 102V75H4Z"/><path d="M99 18H117V102H99Z"/>',
+ deletion:'<path d="M48 8H72V32H48ZM12 80H36V104H12ZM84 80H108V104H84Z"/><path d="M48 80H72V86H48ZM48 98H72V104H48Z" opacity=".28"/>'
+};
+const iconMarkup=id=>`<svg viewBox="0 0 120 124" fill="currentColor" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">${iconPaths[id]}</svg>`;
+
 let mode='practice', deck=[],position=0,answered=false,answers=[],practiceIds=[...ids],practiceCorrect=0,practiceTotal=0,streak=0,reviewAnswers=[],mistakePractice=false;
 let drag=null,ghost=null;
 function announce(text){$('route-notice').textContent=text;}
 function choices(target){$(target).innerHTML=allRules.map(r=>`<label class="category-option"><input type="checkbox" value="${r.id}" checked> ${esc(r.name)}</label>`).join('');}
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();$('main').focus();});
 choices('practice-categories');choices('test-categories');
-$('boxes').innerHTML=RULES.map((r,i)=>`<div class="box-wrap ${r.color}" data-rule="${r.id}"><div class="box-label"><button type="button" class="label-title" aria-describedby="tip-${r.id}" aria-label="${esc(r.name)}: magyarázat">${esc(r.name)}</button><span class="tooltip" role="tooltip" id="tip-${r.id}">${esc(r.tip)}</span><kbd aria-hidden="true">${i+1}</kbd></div><button type="button" class="drop-box" data-answer="${r.id}" aria-label="${i+1}. ${esc(r.name)}"><span class="box-no" aria-hidden="true">0${i+1}</span><span class="box-symbol" aria-hidden="true">${r.symbol}</span><span class="box-state"></span></button></div>`).join('');
+$('boxes').innerHTML=RULES.map((r,i)=>`<div class="box-wrap ${r.color}" data-rule="${r.id}"><div class="box-label"><button type="button" class="label-title" aria-describedby="tip-${r.id}" aria-label="${esc(r.name)}: magyarázat">${esc(r.name)}</button><span class="tooltip" role="tooltip" id="tip-${r.id}">${esc(r.tip)}</span><kbd aria-hidden="true">${i+1}</kbd></div><button type="button" class="drop-box" data-answer="${r.id}" aria-label="${i+1}. ${esc(r.name)}"><span class="box-no" aria-hidden="true">0${i+1}</span><span class="box-symbol" aria-hidden="true">${iconMarkup(r.id)}</span><span class="box-state"></span></button></div>`).join('');
 $('help-toc').innerHTML=RULES.map((r,i)=>`<a href="#szabaly-${r.id}">0${i+1} ${esc(r.name)}</a>`).join('');
 $('rules-content').innerHTML=RULES.map((r,i)=>`<article class="rule-article" id="szabaly-${r.id}"><span class="rule-index">0${i+1}</span><div><h2>${esc(r.name)}</h2><p class="rule-tip">${esc(r.tip)}</p><p>${esc(r.body)}</p><p>${esc(r.detail)}</p></div><div class="rule-examples"><p>ÍRJUK → EJTJÜK / ALAKÍTJUK</p>${r.examples.map(e=>`<div class="example-row"><div class="example-change"><span>${esc(e[0])}</span><span class="arrow">→</span><strong>${esc(e[1])}</strong></div><p>${esc(e[2])}</p></div>`).join('')}<p class="rule-source"><a href="https://helyesiras.mta.hu/helyesiras/default/akh12" target="_blank" rel="noopener noreferrer">Forrás: ${esc(r.source)} ↗</a></p></div></article>`).join('');
 $('sources-list').innerHTML=SOURCES.map(s=>`<div class="source-link"><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><p>${esc(s.note)}</p></div>`).join('');

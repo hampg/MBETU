@@ -35,3 +35,8 @@ button,input{text-transform:inherit}
 .word-card:hover{box-shadow:4px 9px 0 #c4caf3}
 .word-card .grip{color:#ffffffa6}
 .drag-ghost{background:var(--blue);color:#fff}
+
+/* Custom geometric marks, independent of the system font. */
+.drop-box .box-symbol{display:flex;align-items:center;justify-content:center;width:67%;height:70%;max-width:240px;max-height:248px}
+.box-symbol svg{display:block;width:100%;height:100%;overflow:visible}
+.drop-box:hover:enabled .box-symbol{transform:rotate(0) scale(1.035)}
