@@ -1,0 +1,243 @@
+# MBETŰ – hibakereso; UTF-8 TSV; saját szerkesztés
+# feladat	válaszok_JSON	magyarázatok_JSON	szócsalád	megoldás	kontextus	betűválaszték_JSON
+ajak	["correct"]	{"correct": "Helyes: a megfelelő íráskép ajak. A [j] hangot ebben a szóban j betű jelöli."}	ajak	ajak	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+alyak	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ajak. A [j] hangot ebben a szóban j betű jelöli."}	ajak	ajak	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+baj	["correct"]	{"correct": "Helyes: a megfelelő íráskép baj. A [j] hangot ebben a szóban j betű jelöli."}	baj	baj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+baly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép baj. A [j] hangot ebben a szóban j betű jelöli."}	baj	baj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+bejárat	["correct"]	{"correct": "Helyes: a megfelelő íráskép bejárat. A [j] hangot ebben a szóban j betű jelöli."}	bejárat	bejárat	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+belyárat	["fix"]	{"fix": "Javítandó: a megfelelő íráskép bejárat. A [j] hangot ebben a szóban j betű jelöli."}	bejárat	bejárat	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+cserje	["correct"]	{"correct": "Helyes: a megfelelő íráskép cserje. A [j] hangot ebben a szóban j betű jelöli."}	cserje	cserje	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+cserlye	["fix"]	{"fix": "Javítandó: a megfelelő íráskép cserje. A [j] hangot ebben a szóban j betű jelöli."}	cserje	cserje	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+csukja	["correct"]	{"correct": "Helyes: a megfelelő íráskép csukja. A [j] hangot ebben a szóban j betű jelöli."}	csukja	csukja	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+csuklya	["fix"]	{"fix": "Javítandó: a megfelelő íráskép csukja. A [j] hangot ebben a szóban j betű jelöli."}	csukja	csukja	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ejt	["correct"]	{"correct": "Helyes: a megfelelő íráskép ejt. A [j] hangot ebben a szóban j betű jelöli."}	ejt	ejt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+elyt	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ejt. A [j] hangot ebben a szóban j betű jelöli."}	ejt	ejt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+éj	["correct"]	{"correct": "Helyes: a megfelelő íráskép éj. A [j] hangot ebben a szóban j betű jelöli."}	éj	éj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ély	["fix"]	{"fix": "Javítandó: a megfelelő íráskép éj. A [j] hangot ebben a szóban j betű jelöli."}	éj	éj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+fej	["correct"]	{"correct": "Helyes: a megfelelő íráskép fej. A [j] hangot ebben a szóban j betű jelöli."}	fej	fej	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+fely	["fix"]	{"fix": "Javítandó: a megfelelő íráskép fej. A [j] hangot ebben a szóban j betű jelöli."}	fej	fej	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+fejel	["correct"]	{"correct": "Helyes: a megfelelő íráskép fejel. A [j] hangot ebben a szóban j betű jelöli."}	fejel	fejel	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+felyel	["fix"]	{"fix": "Javítandó: a megfelelő íráskép fejel. A [j] hangot ebben a szóban j betű jelöli."}	fejel	fejel	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+haj	["correct"]	{"correct": "Helyes: a megfelelő íráskép haj. A [j] hangot ebben a szóban j betű jelöli."}	haj	haj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+haly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép haj. A [j] hangot ebben a szóban j betű jelöli."}	haj	haj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+hajó	["correct"]	{"correct": "Helyes: a megfelelő íráskép hajó. A [j] hangot ebben a szóban j betű jelöli."}	hajó	hajó	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+halyó	["fix"]	{"fix": "Javítandó: a megfelelő íráskép hajó. A [j] hangot ebben a szóban j betű jelöli."}	hajó	hajó	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+héja	["correct"]	{"correct": "Helyes: a megfelelő íráskép héja. A [j] hangot ebben a szóban j betű jelöli."}	héja	héja	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+hélya	["fix"]	{"fix": "Javítandó: a megfelelő íráskép héja. A [j] hangot ebben a szóban j betű jelöli."}	héja	héja	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ijed	["correct"]	{"correct": "Helyes: a megfelelő íráskép ijed. A [j] hangot ebben a szóban j betű jelöli."}	ijed	ijed	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ilyed	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ijed. A [j] hangot ebben a szóban j betű jelöli."}	ijed	ijed	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ijeszt	["correct"]	{"correct": "Helyes: a megfelelő íráskép ijeszt. A [j] hangot ebben a szóban j betű jelöli."}	ijeszt	ijeszt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ilyeszt	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ijeszt. A [j] hangot ebben a szóban j betű jelöli."}	ijeszt	ijeszt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jeges	["correct"]	{"correct": "Helyes: a megfelelő íráskép jeges. A [j] hangot ebben a szóban j betű jelöli."}	jeges	jeges	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyeges	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jeges. A [j] hangot ebben a szóban j betű jelöli."}	jeges	jeges	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jegyzet	["correct"]	{"correct": "Helyes: a megfelelő íráskép jegyzet. A [j] hangot ebben a szóban j betű jelöli."}	jegyzet	jegyzet	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyegyzet	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jegyzet. A [j] hangot ebben a szóban j betű jelöli."}	jegyzet	jegyzet	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jelen	["correct"]	{"correct": "Helyes: a megfelelő íráskép jelen. A [j] hangot ebben a szóban j betű jelöli."}	jelen	jelen	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyelen	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jelen. A [j] hangot ebben a szóban j betű jelöli."}	jelen	jelen	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jelvény	["correct"]	{"correct": "Helyes: a megfelelő íráskép jelvény. A [j] hangot ebben a szóban j betű jelöli."}	jelvény	jelvény	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyelvény	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jelvény. A [j] hangot ebben a szóban j betű jelöli."}	jelvény	jelvény	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jog	["correct"]	{"correct": "Helyes: a megfelelő íráskép jog. A [j] hangot ebben a szóban j betű jelöli."}	jog	jog	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyog	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jog. A [j] hangot ebben a szóban j betű jelöli."}	jog	jog	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jókedv	["correct"]	{"correct": "Helyes: a megfelelő íráskép jókedv. A [j] hangot ebben a szóban j betű jelöli."}	jókedv	jókedv	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyókedv	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jókedv. A [j] hangot ebben a szóban j betű jelöli."}	jókedv	jókedv	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+játék	["correct"]	{"correct": "Helyes: a megfelelő íráskép játék. A [j] hangot ebben a szóban j betű jelöli."}	játék	játék	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyáték	["fix"]	{"fix": "Javítandó: a megfelelő íráskép játék. A [j] hangot ebben a szóban j betű jelöli."}	játék	játék	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+javít	["correct"]	{"correct": "Helyes: a megfelelő íráskép javít. A [j] hangot ebben a szóban j betű jelöli."}	javít	javít	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyavít	["fix"]	{"fix": "Javítandó: a megfelelő íráskép javít. A [j] hangot ebben a szóban j betű jelöli."}	javít	javít	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jár	["correct"]	{"correct": "Helyes: a megfelelő íráskép jár. A [j] hangot ebben a szóban j betű jelöli."}	jár	jár	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyár	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jár. A [j] hangot ebben a szóban j betű jelöli."}	jár	jár	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jászol	["correct"]	{"correct": "Helyes: a megfelelő íráskép jászol. A [j] hangot ebben a szóban j betű jelöli."}	jászol	jászol	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyászol	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jászol. A [j] hangot ebben a szóban j betű jelöli."}	jászol	jászol	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+július	["correct"]	{"correct": "Helyes: a megfelelő íráskép július. A [j] hangot ebben a szóban j betű jelöli."}	július	július	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyúlius	["fix"]	{"fix": "Javítandó: a megfelelő íráskép július. A [j] hangot ebben a szóban j betű jelöli."}	július	július	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+juh	["correct"]	{"correct": "Helyes: a megfelelő íráskép juh. A [j] hangot ebben a szóban j betű jelöli."}	juh	juh	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyuh	["fix"]	{"fix": "Javítandó: a megfelelő íráskép juh. A [j] hangot ebben a szóban j betű jelöli."}	juh	juh	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jutalom	["correct"]	{"correct": "Helyes: a megfelelő íráskép jutalom. A [j] hangot ebben a szóban j betű jelöli."}	jutalom	jutalom	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyutalom	["fix"]	{"fix": "Javítandó: a megfelelő íráskép jutalom. A [j] hangot ebben a szóban j betű jelöli."}	jutalom	jutalom	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+karaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép karaj. A [j] hangot ebben a szóban j betű jelöli."}	karaj	karaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+karaly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép karaj. A [j] hangot ebben a szóban j betű jelöli."}	karaj	karaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lejt	["correct"]	{"correct": "Helyes: a megfelelő íráskép lejt. A [j] hangot ebben a szóban j betű jelöli."}	lejt	lejt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lelyt	["fix"]	{"fix": "Javítandó: a megfelelő íráskép lejt. A [j] hangot ebben a szóban j betű jelöli."}	lejt	lejt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+majom	["correct"]	{"correct": "Helyes: a megfelelő íráskép majom. A [j] hangot ebben a szóban j betű jelöli."}	majom	majom	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+malyom	["fix"]	{"fix": "Javítandó: a megfelelő íráskép majom. A [j] hangot ebben a szóban j betű jelöli."}	majom	majom	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+majd	["correct"]	{"correct": "Helyes: a megfelelő íráskép majd. A [j] hangot ebben a szóban j betű jelöli."}	majd	majd	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+malyd	["fix"]	{"fix": "Javítandó: a megfelelő íráskép majd. A [j] hangot ebben a szóban j betű jelöli."}	majd	majd	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+muszáj	["correct"]	{"correct": "Helyes: a megfelelő íráskép muszáj. A [j] hangot ebben a szóban j betű jelöli."}	muszáj	muszáj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+muszály	["fix"]	{"fix": "Javítandó: a megfelelő íráskép muszáj. A [j] hangot ebben a szóban j betű jelöli."}	muszáj	muszáj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+olaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép olaj. A [j] hangot ebben a szóban j betű jelöli."}	olaj	olaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+olaly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép olaj. A [j] hangot ebben a szóban j betű jelöli."}	olaj	olaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pajta	["correct"]	{"correct": "Helyes: a megfelelő íráskép pajta. A [j] hangot ebben a szóban j betű jelöli."}	pajta	pajta	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+palyta	["fix"]	{"fix": "Javítandó: a megfelelő íráskép pajta. A [j] hangot ebben a szóban j betű jelöli."}	pajta	pajta	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+raj	["correct"]	{"correct": "Helyes: a megfelelő íráskép raj. A [j] hangot ebben a szóban j betű jelöli."}	raj	raj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+raly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép raj. A [j] hangot ebben a szóban j betű jelöli."}	raj	raj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+rajzol	["correct"]	{"correct": "Helyes: a megfelelő íráskép rajzol. A [j] hangot ebben a szóban j betű jelöli."}	rajzol	rajzol	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ralyzol	["fix"]	{"fix": "Javítandó: a megfelelő íráskép rajzol. A [j] hangot ebben a szóban j betű jelöli."}	rajzol	rajzol	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+rejtvény	["correct"]	{"correct": "Helyes: a megfelelő íráskép rejtvény. A [j] hangot ebben a szóban j betű jelöli."}	rejtvény	rejtvény	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+relytvény	["fix"]	{"fix": "Javítandó: a megfelelő íráskép rejtvény. A [j] hangot ebben a szóban j betű jelöli."}	rejtvény	rejtvény	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+rojt	["correct"]	{"correct": "Helyes: a megfelelő íráskép rojt. A [j] hangot ebben a szóban j betű jelöli."}	rojt	rojt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+rolyt	["fix"]	{"fix": "Javítandó: a megfelelő íráskép rojt. A [j] hangot ebben a szóban j betű jelöli."}	rojt	rojt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+sajnál	["correct"]	{"correct": "Helyes: a megfelelő íráskép sajnál. A [j] hangot ebben a szóban j betű jelöli."}	sajnál	sajnál	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+salynál	["fix"]	{"fix": "Javítandó: a megfelelő íráskép sajnál. A [j] hangot ebben a szóban j betű jelöli."}	sajnál	sajnál	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+sóhaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép sóhaj. A [j] hangot ebben a szóban j betű jelöli."}	sóhaj	sóhaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+sóhaly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép sóhaj. A [j] hangot ebben a szóban j betű jelöli."}	sóhaj	sóhaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+száj	["correct"]	{"correct": "Helyes: a megfelelő íráskép száj. A [j] hangot ebben a szóban j betű jelöli."}	száj	száj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+szály	["fix"]	{"fix": "Javítandó: a megfelelő íráskép száj. A [j] hangot ebben a szóban j betű jelöli."}	száj	száj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+táj	["correct"]	{"correct": "Helyes: a megfelelő íráskép táj. A [j] hangot ebben a szóban j betű jelöli."}	táj	táj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tály	["fix"]	{"fix": "Javítandó: a megfelelő íráskép táj. A [j] hangot ebben a szóban j betű jelöli."}	táj	táj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+talaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép talaj. A [j] hangot ebben a szóban j betű jelöli."}	talaj	talaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+talaly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép talaj. A [j] hangot ebben a szóban j betű jelöli."}	talaj	talaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tejföl	["correct"]	{"correct": "Helyes: a megfelelő íráskép tejföl. A [j] hangot ebben a szóban j betű jelöli."}	tejföl	tejföl	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+telyföl	["fix"]	{"fix": "Javítandó: a megfelelő íráskép tejföl. A [j] hangot ebben a szóban j betű jelöli."}	tejföl	tejföl	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tolvaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép tolvaj. A [j] hangot ebben a szóban j betű jelöli."}	tolvaj	tolvaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tolvaly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép tolvaj. A [j] hangot ebben a szóban j betű jelöli."}	tolvaj	tolvaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tojás	["correct"]	{"correct": "Helyes: a megfelelő íráskép tojás. A [j] hangot ebben a szóban j betű jelöli."}	tojás	tojás	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tolyás	["fix"]	{"fix": "Javítandó: a megfelelő íráskép tojás. A [j] hangot ebben a szóban j betű jelöli."}	tojás	tojás	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+újra	["correct"]	{"correct": "Helyes: a megfelelő íráskép újra. A [j] hangot ebben a szóban j betű jelöli."}	újra	újra	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+úlyra	["fix"]	{"fix": "Javítandó: a megfelelő íráskép újra. A [j] hangot ebben a szóban j betű jelöli."}	újra	újra	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ujj	["correct"]	{"correct": "Helyes: a megfelelő íráskép ujj. A [j] hangot ebben a szóban j betű jelöli."}	ujj	ujj	A kéz egyik része.	{}
+ulyj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ujj. A [j] hangot ebben a szóban j betű jelöli."}	ujj	ujj	A kéz egyik része.	{}
+vaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép vaj. A [j] hangot ebben a szóban j betű jelöli."}	vaj	vaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+valy	["fix"]	{"fix": "Javítandó: a megfelelő íráskép vaj. A [j] hangot ebben a szóban j betű jelöli."}	vaj	vaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+váj	["correct"]	{"correct": "Helyes: a megfelelő íráskép váj. A [j] hangot ebben a szóban j betű jelöli."}	váj	váj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+vály	["fix"]	{"fix": "Javítandó: a megfelelő íráskép váj. A [j] hangot ebben a szóban j betű jelöli."}	váj	váj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+zajos	["correct"]	{"correct": "Helyes: a megfelelő íráskép zajos. A [j] hangot ebben a szóban j betű jelöli."}	zajos	zajos	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+zalyos	["fix"]	{"fix": "Javítandó: a megfelelő íráskép zajos. A [j] hangot ebben a szóban j betű jelöli."}	zajos	zajos	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+zsivaj	["correct"]	{"correct": "Helyes: a megfelelő íráskép zsivaj. A [j] hangot ebben a szóban j betű jelöli."}	zsivaj	zsivaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+zsivaly	["fix"]	{"fix": "Javítandó: a megfelelő íráskép zsivaj. A [j] hangot ebben a szóban j betű jelöli."}	zsivaj	zsivaj	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+bagoly	["correct"]	{"correct": "Helyes: a megfelelő íráskép bagoly. A [j] hangot ebben a szóban ly betű jelöli."}	bagoly	bagoly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+bagoj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép bagoly. A [j] hangot ebben a szóban ly betű jelöli."}	bagoly	bagoly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+boglya	["correct"]	{"correct": "Helyes: a megfelelő íráskép boglya. A [j] hangot ebben a szóban ly betű jelöli."}	boglya	boglya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+bogja	["fix"]	{"fix": "Javítandó: a megfelelő íráskép boglya. A [j] hangot ebben a szóban ly betű jelöli."}	boglya	boglya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+csekély	["correct"]	{"correct": "Helyes: a megfelelő íráskép csekély. A [j] hangot ebben a szóban ly betű jelöli."}	csekély	csekély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+csekéj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép csekély. A [j] hangot ebben a szóban ly betű jelöli."}	csekély	csekély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+esély	["correct"]	{"correct": "Helyes: a megfelelő íráskép esély. A [j] hangot ebben a szóban ly betű jelöli."}	esély	esély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+eséj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép esély. A [j] hangot ebben a szóban ly betű jelöli."}	esély	esély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+folyadék	["correct"]	{"correct": "Helyes: a megfelelő íráskép folyadék. A [j] hangot ebben a szóban ly betű jelöli."}	folyadék	folyadék	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+fojadék	["fix"]	{"fix": "Javítandó: a megfelelő íráskép folyadék. A [j] hangot ebben a szóban ly betű jelöli."}	folyadék	folyadék	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+folyik	["correct"]	{"correct": "Helyes: a megfelelő íráskép folyik. A [j] hangot ebben a szóban ly betű jelöli."}	folyik	folyik	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+fojik	["fix"]	{"fix": "Javítandó: a megfelelő íráskép folyik. A [j] hangot ebben a szóban ly betű jelöli."}	folyik	folyik	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+furulya	["correct"]	{"correct": "Helyes: a megfelelő íráskép furulya. A [j] hangot ebben a szóban ly betű jelöli."}	furulya	furulya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+furuja	["fix"]	{"fix": "Javítandó: a megfelelő íráskép furulya. A [j] hangot ebben a szóban ly betű jelöli."}	furulya	furulya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+gereblye	["correct"]	{"correct": "Helyes: a megfelelő íráskép gereblye. A [j] hangot ebben a szóban ly betű jelöli."}	gereblye	gereblye	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+gerebje	["fix"]	{"fix": "Javítandó: a megfelelő íráskép gereblye. A [j] hangot ebben a szóban ly betű jelöli."}	gereblye	gereblye	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+helyzet	["correct"]	{"correct": "Helyes: a megfelelő íráskép helyzet. A [j] hangot ebben a szóban ly betű jelöli."}	helyzet	helyzet	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+hejzet	["fix"]	{"fix": "Javítandó: a megfelelő íráskép helyzet. A [j] hangot ebben a szóban ly betű jelöli."}	helyzet	helyzet	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ibolya	["correct"]	{"correct": "Helyes: a megfelelő íráskép ibolya. A [j] hangot ebben a szóban ly betű jelöli."}	ibolya	ibolya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+iboja	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ibolya. A [j] hangot ebben a szóban ly betű jelöli."}	ibolya	ibolya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+karvaly	["correct"]	{"correct": "Helyes: a megfelelő íráskép karvaly. A [j] hangot ebben a szóban ly betű jelöli."}	karvaly	karvaly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+karvaj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép karvaly. A [j] hangot ebben a szóban ly betű jelöli."}	karvaly	karvaly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+kedély	["correct"]	{"correct": "Helyes: a megfelelő íráskép kedély. A [j] hangot ebben a szóban ly betű jelöli."}	kedély	kedély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+kedéj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép kedély. A [j] hangot ebben a szóban ly betű jelöli."}	kedély	kedély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+király	["correct"]	{"correct": "Helyes: a megfelelő íráskép király. A [j] hangot ebben a szóban ly betű jelöli."}	király	király	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+kiráj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép király. A [j] hangot ebben a szóban ly betű jelöli."}	király	király	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+komoly	["correct"]	{"correct": "Helyes: a megfelelő íráskép komoly. A [j] hangot ebben a szóban ly betű jelöli."}	komoly	komoly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+komoj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép komoly. A [j] hangot ebben a szóban ly betű jelöli."}	komoly	komoly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+kristály	["correct"]	{"correct": "Helyes: a megfelelő íráskép kristály. A [j] hangot ebben a szóban ly betű jelöli."}	kristály	kristály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+kristáj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép kristály. A [j] hangot ebben a szóban ly betű jelöli."}	kristály	kristály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyuk	["correct"]	{"correct": "Helyes: a megfelelő íráskép lyuk. A [j] hangot ebben a szóban ly betű jelöli."}	lyuk	lyuk	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+juk	["fix"]	{"fix": "Javítandó: a megfelelő íráskép lyuk. A [j] hangot ebben a szóban ly betű jelöli."}	lyuk	lyuk	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+lyukaszt	["correct"]	{"correct": "Helyes: a megfelelő íráskép lyukaszt. A [j] hangot ebben a szóban ly betű jelöli."}	lyukaszt	lyukaszt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+jukaszt	["fix"]	{"fix": "Javítandó: a megfelelő íráskép lyukaszt. A [j] hangot ebben a szóban ly betű jelöli."}	lyukaszt	lyukaszt	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+milyen	["correct"]	{"correct": "Helyes: a megfelelő íráskép milyen. A [j] hangot ebben a szóban ly betű jelöli."}	milyen	milyen	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+mijen	["fix"]	{"fix": "Javítandó: a megfelelő íráskép milyen. A [j] hangot ebben a szóban ly betű jelöli."}	milyen	milyen	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+mosoly	["correct"]	{"correct": "Helyes: a megfelelő íráskép mosoly. A [j] hangot ebben a szóban ly betű jelöli."}	mosoly	mosoly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+mosoj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép mosoly. A [j] hangot ebben a szóban ly betű jelöli."}	mosoly	mosoly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+nyavalya	["correct"]	{"correct": "Helyes: a megfelelő íráskép nyavalya. A [j] hangot ebben a szóban ly betű jelöli."}	nyavalya	nyavalya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+nyavaja	["fix"]	{"fix": "Javítandó: a megfelelő íráskép nyavalya. A [j] hangot ebben a szóban ly betű jelöli."}	nyavalya	nyavalya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+olykor	["correct"]	{"correct": "Helyes: a megfelelő íráskép olykor. A [j] hangot ebben a szóban ly betű jelöli."}	olykor	olykor	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ojkor	["fix"]	{"fix": "Javítandó: a megfelelő íráskép olykor. A [j] hangot ebben a szóban ly betű jelöli."}	olykor	olykor	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pálya	["correct"]	{"correct": "Helyes: a megfelelő íráskép pálya. A [j] hangot ebben a szóban ly betű jelöli."}	pálya	pálya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pája	["fix"]	{"fix": "Javítandó: a megfelelő íráskép pálya. A [j] hangot ebben a szóban ly betű jelöli."}	pálya	pálya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pehely	["correct"]	{"correct": "Helyes: a megfelelő íráskép pehely. A [j] hangot ebben a szóban ly betű jelöli."}	pehely	pehely	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pehej	["fix"]	{"fix": "Javítandó: a megfelelő íráskép pehely. A [j] hangot ebben a szóban ly betű jelöli."}	pehely	pehely	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pocsolya	["correct"]	{"correct": "Helyes: a megfelelő íráskép pocsolya. A [j] hangot ebben a szóban ly betű jelöli."}	pocsolya	pocsolya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+pocsoja	["fix"]	{"fix": "Javítandó: a megfelelő íráskép pocsolya. A [j] hangot ebben a szóban ly betű jelöli."}	pocsolya	pocsolya	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ragály	["correct"]	{"correct": "Helyes: a megfelelő íráskép ragály. A [j] hangot ebben a szóban ly betű jelöli."}	ragály	ragály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ragáj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ragály. A [j] hangot ebben a szóban ly betű jelöli."}	ragály	ragály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+sekély	["correct"]	{"correct": "Helyes: a megfelelő íráskép sekély. A [j] hangot ebben a szóban ly betű jelöli."}	sekély	sekély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+sekéj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép sekély. A [j] hangot ebben a szóban ly betű jelöli."}	sekély	sekély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+sirály	["correct"]	{"correct": "Helyes: a megfelelő íráskép sirály. A [j] hangot ebben a szóban ly betű jelöli."}	sirály	sirály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+siráj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép sirály. A [j] hangot ebben a szóban ly betű jelöli."}	sirály	sirály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+súly	["correct"]	{"correct": "Helyes: a megfelelő íráskép súly. A [j] hangot ebben a szóban ly betű jelöli."}	súly	súly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+súj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép súly. A [j] hangot ebben a szóban ly betű jelöli."}	súly	súly	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+szabály	["correct"]	{"correct": "Helyes: a megfelelő íráskép szabály. A [j] hangot ebben a szóban ly betű jelöli."}	szabály	szabály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+szabáj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép szabály. A [j] hangot ebben a szóban ly betű jelöli."}	szabály	szabály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+személy	["correct"]	{"correct": "Helyes: a megfelelő íráskép személy. A [j] hangot ebben a szóban ly betű jelöli."}	személy	személy	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+szeméj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép személy. A [j] hangot ebben a szóban ly betű jelöli."}	személy	személy	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tartály	["correct"]	{"correct": "Helyes: a megfelelő íráskép tartály. A [j] hangot ebben a szóban ly betű jelöli."}	tartály	tartály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tartáj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép tartály. A [j] hangot ebben a szóban ly betű jelöli."}	tartály	tartály	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tengely	["correct"]	{"correct": "Helyes: a megfelelő íráskép tengely. A [j] hangot ebben a szóban ly betű jelöli."}	tengely	tengely	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+tengej	["fix"]	{"fix": "Javítandó: a megfelelő íráskép tengely. A [j] hangot ebben a szóban ly betű jelöli."}	tengely	tengely	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ünnepély	["correct"]	{"correct": "Helyes: a megfelelő íráskép ünnepély. A [j] hangot ebben a szóban ly betű jelöli."}	ünnepély	ünnepély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+ünnepéj	["fix"]	{"fix": "Javítandó: a megfelelő íráskép ünnepély. A [j] hangot ebben a szóban ly betű jelöli."}	ünnepély	ünnepély	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+veszélyes	["correct"]	{"correct": "Helyes: a megfelelő íráskép veszélyes. A [j] hangot ebben a szóban ly betű jelöli."}	veszélyes	veszélyes	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+veszéjes	["fix"]	{"fix": "Javítandó: a megfelelő íráskép veszélyes. A [j] hangot ebben a szóban ly betű jelöli."}	veszélyes	veszélyes	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+zsindely	["correct"]	{"correct": "Helyes: a megfelelő íráskép zsindely. A [j] hangot ebben a szóban ly betű jelöli."}	zsindely	zsindely	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+zsindej	["fix"]	{"fix": "Javítandó: a megfelelő íráskép zsindely. A [j] hangot ebben a szóban ly betű jelöli."}	zsindely	zsindely	A hiány helyére j vagy ly kerül. A többi betű változatlan.	{}
+híd	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: híd. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	híd	híd	Építmény a folyó két partja között.	{}
+hid	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: híd. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	híd	híd	Építmény a folyó két partja között.	{}
+fű	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: fű. A célbetű ű; a másik hosszúság ebben a feladatban nem megfelelő."}	fű	fű	Zöld növényzet a réten.	{}
+fü	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: fű. A célbetű ű; a másik hosszúság ebben a feladatban nem megfelelő."}	fű	fű	Zöld növényzet a réten.	{}
+lúd	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: lúd. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	lúd	lúd	A liba másik neve.	{}
+lud	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: lúd. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	lúd	lúd	A liba másik neve.	{}
+szín	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: szín. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	szín	szín	Például piros vagy kék.	{}
+szin	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: szín. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	szín	szín	Például piros vagy kék.	{}
+sír	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: sír. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	sír	sír	Könnyezik.	{}
+sir	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: sír. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	sír	sír	Könnyezik.	{}
+húsz	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: húsz. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	húsz	húsz	A tizenkilencet követő szám.	{}
+husz	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: húsz. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	húsz	húsz	A tizenkilencet követő szám.	{}
+húz	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: húz. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	húz	húz	Magához közelít valamit.	{}
+huz	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: húz. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	húz	húz	Magához közelít valamit.	{}
+túró	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: túró. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	túró	túró	Tejtermék.	{}
+turó	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: túró. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	túró	túró	Tejtermék.	{}
+új	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: új. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	új	új	Nem régi.	{}
+uj	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: új. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	új	új	Nem régi.	{}
+kívül	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: kívül. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	kívül	kívül	Nem belül.	{}
+kivül	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: kívül. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	kívül	kívül	Nem belül.	{}
+dicsér	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: dicsér. A célbetű i; a másik hosszúság ebben a feladatban nem megfelelő."}	dicsér	dicsér	Elismerően beszél valakiről.	{}
+dícsér	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: dicsér. A célbetű i; a másik hosszúság ebben a feladatban nem megfelelő."}	dicsér	dicsér	Elismerően beszél valakiről.	{}
+hiszen	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: hiszen. A célbetű i; a másik hosszúság ebben a feladatban nem megfelelő."}	hiszen	hiszen	Magyarázatot bevezető kötőszó.	{}
+híszen	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: hiszen. A célbetű i; a másik hosszúság ebben a feladatban nem megfelelő."}	hiszen	hiszen	Magyarázatot bevezető kötőszó.	{}
+ugrik	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: ugrik. A célbetű u; a másik hosszúság ebben a feladatban nem megfelelő."}	ugrik	ugrik	Elrugaszkodik a földtől.	{}
+úgrik	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: ugrik. A célbetű u; a másik hosszúság ebben a feladatban nem megfelelő."}	ugrik	ugrik	Elrugaszkodik a földtől.	{}
+újj	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: ujj. A célbetű u; a másik hosszúság ebben a feladatban nem megfelelő."}	ujj	ujj	A kéz egyik része.	{}
+füzet	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: füzet. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	füzet	füzet	Iskolai írószer, lapokkal.	{}
+fűzet	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: füzet. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	füzet	füzet	Iskolai írószer, lapokkal.	{}
+tükör	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: tükör. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	tükör	tükör	Megnézhetjük benne az arcunkat.	{}
+tűkör	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: tükör. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	tükör	tükör	Megnézhetjük benne az arcunkat.	{}
+szünet	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: szünet. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	szünet	szünet	Rövid pihenő két tanóra között.	{}
+szűnet	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: szünet. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	szünet	szünet	Rövid pihenő két tanóra között.	{}
+fürge	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: fürge. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	fürge	fürge	Gyors mozgású.	{}
+fűrge	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: fürge. A célbetű ü; a másik hosszúság ebben a feladatban nem megfelelő."}	fürge	fürge	Gyors mozgású.	{}
+gyűrű	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: gyűrű. A célbetű ű; a másik hosszúság ebben a feladatban nem megfelelő."}	gyűrű	gyűrű	Ujjon viselt ékszer.	{}
+gyürű	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: gyűrű. A célbetű ű; a másik hosszúság ebben a feladatban nem megfelelő."}	gyűrű	gyűrű	Ujjon viselt ékszer.	{}
+szűr	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: szűr. A célbetű ű; a másik hosszúság ebben a feladatban nem megfelelő."}	szűr	szűr	Szitán vagy szűrőn átenged.	{}
+szür	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: szűr. A célbetű ű; a másik hosszúság ebben a feladatban nem megfelelő."}	szűr	szűr	Szitán vagy szűrőn átenged.	{}
+együtt	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: együtt. A célbetű tt; a másik hosszúság ebben a feladatban nem megfelelő."}	együtt	együtt	Nem külön-külön.	{}
+együt	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: együtt. A célbetű tt; a másik hosszúság ebben a feladatban nem megfelelő."}	együtt	együtt	Nem külön-külön.	{}
+könny	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: könny. A célbetű nny; a másik hosszúság ebben a feladatban nem megfelelő."}	könny	könny	Szemünkből kicsorduló folyadék.	{}
+köny	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: könny. A célbetű nny; a másik hosszúság ebben a feladatban nem megfelelő."}	könny	könny	Szemünkből kicsorduló folyadék.	{}
+hosszú	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: hosszú. A célbetű ssz; a másik hosszúság ebben a feladatban nem megfelelő."}	hosszú	hosszú	Nagy a hossza.	{}
+hoszú	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: hosszú. A célbetű ssz; a másik hosszúság ebben a feladatban nem megfelelő."}	hosszú	hosszú	Nagy a hossza.	{}
+lassú	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: lassú. A célbetű ss; a másik hosszúság ebben a feladatban nem megfelelő."}	lassú	lassú	Nem gyors.	{}
+lasú	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: lassú. A célbetű ss; a másik hosszúság ebben a feladatban nem megfelelő."}	lassú	lassú	Nem gyors.	{}
+utána	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: utána. A célbetű n; a másik hosszúság ebben a feladatban nem megfelelő."}	utána	utána	Nem előtte, hanem őt követően.	{}
+utánna	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: utána. A célbetű n; a másik hosszúság ebben a feladatban nem megfelelő."}	utána	utána	Nem előtte, hanem őt követően.	{}
+elem	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: elem. A célbetű l; a másik hosszúság ebben a feladatban nem megfelelő."}	elem	elem	Egy szerkezet alkotórésze.	{}
+ellem	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: elem. A célbetű l; a másik hosszúság ebben a feladatban nem megfelelő."}	elem	elem	Egy szerkezet alkotórésze.	{}
+állomás	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: állomás. A célbetű ll; a másik hosszúság ebben a feladatban nem megfelelő."}	állomás	állomás	Itt áll meg a vonat.	{}
+álomás	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: állomás. A célbetű ll; a másik hosszúság ebben a feladatban nem megfelelő."}	állomás	állomás	Itt áll meg a vonat.	{}
+orr	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: orr. A célbetű rr; a másik hosszúság ebben a feladatban nem megfelelő."}	orr	orr	A szaglás szerve.	{}
+or	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: orr. A célbetű rr; a másik hosszúság ebben a feladatban nem megfelelő."}	orr	orr	A szaglás szerve.	{}
+szál	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: szál. A célbetű l; a másik hosszúság ebben a feladatban nem megfelelő."}	szál	szál	Egy vékony darab, például egy szál virág.	{}
+száll	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: szál. A célbetű l; a másik hosszúság ebben a feladatban nem megfelelő."}	szál	szál	Egy vékony darab, például egy szál virág.	{}
+hal	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: hal. A célbetű l; a másik hosszúság ebben a feladatban nem megfelelő."}	hal	hal	Vízben élő állat.	{}
+hall	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: hal. A célbetű l; a másik hosszúság ebben a feladatban nem megfelelő."}	hal	hal	Vízben élő állat.	{}
+koppan	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: koppan. A célbetű pp; a másik hosszúság ebben a feladatban nem megfelelő."}	koppan	koppan	Rövid, kemény hangot ad.	{}
+kopan	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: koppan. A célbetű pp; a másik hosszúság ebben a feladatban nem megfelelő."}	koppan	koppan	Rövid, kemény hangot ad.	{}
+csíp	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: csíp. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	csíp	csíp	Például a szúnyog teszi.	{}
+csip	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: csíp. A célbetű í; a másik hosszúság ebben a feladatban nem megfelelő."}	csíp	csíp	Például a szúnyog teszi.	{}
+csukló	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: csukló. A célbetű u; a másik hosszúság ebben a feladatban nem megfelelő."}	csukló	csukló	A kéz és az alkar közötti ízület.	{}
+csúkló	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: csukló. A célbetű u; a másik hosszúság ebben a feladatban nem megfelelő."}	csukló	csukló	A kéz és az alkar közötti ízület.	{}
+savanyú	["correct"]	{"correct": "A megadott jelentéshez tartozó helyes alak: savanyú. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	savanyú	savanyú	A citrom jellegzetes íze.	{}
+savanyu	["fix"]	{"fix": "A megadott jelentéshez tartozó helyes alak: savanyú. A célbetű ú; a másik hosszúság ebben a feladatban nem megfelelő."}	savanyú	savanyú	A citrom jellegzetes íze.	{}

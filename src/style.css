@@ -79,3 +79,47 @@ button,input{text-transform:inherit}
  #game-view h1>span:before{content:' '}
  #game-view .intro-aside{max-width:245px}
 }
+
+/* Six games, one compact playing surface. */
+.game-kicker{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;margin-bottom:9px}
+.game-kicker .eyebrow{margin:0!important}
+#game-select{max-width:230px;font:inherit;font-size:10px;text-transform:uppercase;border:0;border-bottom:1px solid var(--blue);color:var(--blue);background:transparent;padding:3px 18px 3px 0;cursor:pointer;border-radius:0}
+#game-select:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+#game-prompt{white-space:pre-line}
+.task-context{font-size:12px;line-height:1.45;max-width:650px;margin:0 auto 8px;letter-spacing:0;color:var(--ink)}
+.word-stage.has-context .word-center{max-width:78%;width:100%}
+.word-stage.has-context .word-caption{font-size:7px;margin-bottom:7px}
+.boxes{grid-template-columns:repeat(var(--choice-columns,3),minmax(0,1fr))}
+.boxes[data-count="2"]{max-width:460px;width:100%}
+.boxes[data-count="3"]{max-width:690px;width:100%}
+.choice-glyph{font-size:clamp(30px,5vw,66px);font-weight:500;letter-spacing:-.08em;line-height:1}
+.choice-glyph.letter-option{text-transform:none;letter-spacing:-.04em}
+.test-game-name{margin:-20px 0 30px;color:var(--blue);font-size:12px;text-transform:uppercase}
+.review-item .review-context{color:var(--muted);font-size:12px}
+.library-intro{max-width:760px;font-size:15px;line-height:1.8;margin:-15px 0 35px}
+.game-library{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.library-card{background:#111;color:var(--paper);padding:24px;min-height:250px;border-radius:8px;display:flex;flex-direction:column;gap:18px;transition:transform .15s,box-shadow .15s}
+.library-card:hover{transform:translateY(-3px);box-shadow:0 0 0 3px var(--blue)}
+.library-no{font-size:10px;opacity:.7;letter-spacing:.1em}
+.library-card h2{font-size:25px;letter-spacing:-.025em;line-height:1.12}
+.library-card p{font-size:12px;line-height:1.7;color:#c4c4bd;margin:0}
+.library-meta{display:flex;justify-content:space-between;gap:15px;margin-top:auto;font-size:10px;letter-spacing:.05em}
+@media(min-width:601px){.word-stage.has-context{min-height:146px}.site-header nav{gap:22px}.site-header nav a{font-size:11px}}
+@media(max-width:900px){.game-library{grid-template-columns:repeat(2,1fr)}.site-header nav{gap:14px}.site-header nav a{font-size:10px}}
+@media(max-width:600px){
+ .site-header nav{gap:8px}.site-header nav a{font-size:9px}
+ .game-kicker{margin-bottom:12px}#game-select{font-size:9px;max-width:200px}
+ .boxes[data-count="2"]{max-width:none}.boxes[data-count="3"],.boxes[data-count="4"],.boxes[data-count="6"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .word-stage.has-context .word-center{max-width:100%}
+ .task-context{font-size:11px;line-height:1.5;margin-bottom:12px}
+ .choice-glyph{font-size:50px}
+ .game-library{grid-template-columns:1fr;gap:14px}.library-card{min-height:210px;padding:22px}.library-card h2{font-size:26px}
+ .library-intro{font-size:13px;margin-top:-10px}
+}
+.game-library{grid-template-columns:repeat(3,minmax(0,1fr))}
+.library-card{min-width:0}
+.library-card h2{overflow-wrap:anywhere;hyphens:auto}
+@media(max-width:900px){.game-library{grid-template-columns:repeat(2,minmax(0,1fr))}.library-card h2{font-size:22px}}
+@media(max-width:600px){.game-library{grid-template-columns:minmax(0,1fr)}}
+.game-actions{margin-left:auto}
+.boxes[data-count="4"]{max-width:460px;width:100%}

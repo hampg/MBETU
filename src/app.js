@@ -1,7 +1,8 @@
 'use strict';
 (()=>{
 const $=id=>document.getElementById(id);
-const words=JSON.parse($('word-data').textContent), allRules=[...RULES,NONE], ids=allRules.map(r=>r.id);
+const baseWords=JSON.parse($('word-data').textContent), bankData=JSON.parse($('games-data').textContent);
+let game=GAMES[0],words=baseWords,allRules=[],ids=[];
 const rule=id=>allRules.find(r=>r.id===id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=n=>n.toLocaleString('hu-HU');
@@ -21,22 +22,54 @@ let drag=null,ghost=null;
 function announce(text){$('route-notice').textContent=text;}
 function choices(target){$(target).innerHTML=allRules.map(r=>`<label class="category-option"><input type="checkbox" value="${r.id}" checked> ${esc(r.name)}</label>`).join('');}
 document.querySelector('.skip-link').addEventListener('click',e=>{e.preventDefault();$('main').focus();});
-choices('practice-categories');choices('test-categories');
-$('boxes').innerHTML=RULES.map((r,i)=>`<div class="box-wrap ${r.color}" data-rule="${r.id}"><div class="box-label"><button type="button" class="label-title" aria-describedby="tip-${r.id}" aria-label="${esc(r.name)}: magyarázat">${esc(r.name)}</button><span class="tooltip" role="tooltip" id="tip-${r.id}">${esc(r.tip)}</span><kbd aria-hidden="true">${i+1}</kbd></div><button type="button" class="drop-box" data-answer="${r.id}" aria-label="${i+1}. ${esc(r.name)}"><span class="box-no" aria-hidden="true">0${i+1}</span><span class="box-symbol" aria-hidden="true">${iconMarkup(r.id)}</span><span class="box-state"></span></button></div>`).join('');
-$('help-toc').innerHTML=RULES.map((r,i)=>`<a href="#szabaly-${r.id}">0${i+1} ${esc(r.name)}</a>`).join('');
-$('rules-content').innerHTML=RULES.map((r,i)=>`<article class="rule-article" id="szabaly-${r.id}"><span class="rule-index">0${i+1}</span><div><h2>${esc(r.name)}</h2><p class="rule-tip">${esc(r.tip)}</p><p>${esc(r.body)}</p><p>${esc(r.detail)}</p></div><div class="rule-examples"><p>ÍRJUK → EJTJÜK / ALAKÍTJUK</p>${r.examples.map(e=>`<div class="example-row"><div class="example-change"><span>${esc(e[0])}</span><span class="arrow">→</span><strong>${esc(e[1])}</strong></div><p>${esc(e[2])}</p></div>`).join('')}<p class="rule-source"><a href="https://helyesiras.mta.hu/helyesiras/default/akh12" target="_blank" rel="noopener noreferrer">Forrás: ${esc(r.source)} ↗</a></p></div></article>`).join('');
-$('sources-list').innerHTML=SOURCES.map(s=>`<div class="source-link"><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><p>${esc(s.note)}</p></div>`).join('');
-$('word-count').textContent=`${fmt(words.length)} SZÓALAK · 6 SZABÁLY`;
-$('wordbank-detail').textContent=`A szóbank ${fmt(words.length)} különböző szóalakot tartalmaz, ${fmt(new Set(words.map(w=>w.family)).size)} szócsaládba rendezve. A szám ragozott alakokat is tartalmaz, nem ennyi külön szótövet jelent.`;
+function path(view){return '#'+view+(game.id==='massalhangzok'?'':'/'+game.id);}
+function helpPath(id){return path('szabaly-'+id);}
+const originalLead=document.querySelector('.help-lead').innerHTML;
+const originalProvenance=$('bank-provenance').textContent;
+function renderShell(){
+ choices('practice-categories');choices('test-categories');
+ $('boxes').style.setProperty('--choice-columns',String(game.rules.length===4?2:Math.min(3,game.rules.length)));
+ $('boxes').dataset.count=game.rules.length;
+ $('boxes').innerHTML=game.rules.map((r,i)=>`<div class="box-wrap" data-rule="${r.id}"><div class="box-label"><button type="button" class="label-title" aria-describedby="tip-${r.id}" aria-label="${esc(r.name)}: magyarázat">${esc(r.name)}</button><span class="tooltip" role="tooltip" id="tip-${r.id}">${esc(r.tip)}</span><kbd aria-hidden="true">${i+1}</kbd></div><button type="button" class="drop-box" data-answer="${r.id}" aria-label="${i+1}. ${esc(r.name)}"><span class="box-no" aria-hidden="true">0${i+1}</span><span class="box-symbol" aria-hidden="true">${r.mark?`<span class="choice-glyph">${esc(r.mark)}</span>`:iconMarkup(r.icon||r.id)}</span><span class="box-state"></span></button></div>`).join('');
+ $('help-toc').innerHTML=game.rules.map((r,i)=>`<a href="${helpPath(r.id)}">0${i+1} ${esc(r.name)}</a>`).join('');
+ $('rules-content').innerHTML=game.rules.map((r,i)=>`<article class="rule-article" id="szabaly-${r.id}"><span class="rule-index">0${i+1}</span><div><h2>${esc(r.name)}</h2><p class="rule-tip">${esc(r.tip)}</p><p>${esc(r.body)}</p><p>${esc(r.detail)}</p></div><div class="rule-examples"><p>${game.id==='massalhangzok'?'ÍRJUK → EJTJÜK / ALAKÍTJUK':'FELADAT → MEGOLDÁS'}</p>${r.examples.map(e=>`<div class="example-row"><div class="example-change"><span>${esc(e[0])}</span><span class="arrow">→</span><strong>${esc(e[1])}</strong></div><p>${esc(e[2])}</p></div>`).join('')}<p class="rule-source"><a href="https://helyesiras.mta.hu/helyesiras/default/akh12" target="_blank" rel="noopener noreferrer">Forrás: ${esc(game.reference||r.source)} ↗</a></p></div></article>`).join('');
+ const sources=game.id==='massalhangzok'?SOURCES:SOURCES.slice(0,1);
+ $('sources-list').innerHTML=sources.map(s=>`<div class="source-link"><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.title)} ↗</a><p>${esc(game.reference||s.note)}</p></div>`).join('');
+ document.querySelectorAll('.consonant-only').forEach(el=>el.hidden=game.id!=='massalhangzok');
+ document.querySelector('#help-view > .eyebrow').textContent='SZABÁLYKÖNYV / '+game.label;
+ $('help-title').innerHTML=game.id==='massalhangzok'?'A szabály mögött<br><span>mindig van egy hang.</span>':`${esc(game.name)}<br><span>Szabályok és példák.</span>`;
+ document.querySelector('.help-lead').innerHTML=game.lead||originalLead;
+ $('word-count').textContent=`${fmt(words.length)} ${game.id==='massalhangzok'?'SZÓALAK':'FELADAT'} · ${game.rules.length} KATEGÓRIA`;
+ $('wordbank-detail').textContent=game.id==='massalhangzok'?`A szóbank ${fmt(words.length)} különböző szóalakot tartalmaz, ${fmt(new Set(words.map(w=>w.family)).size)} szócsaládba rendezve. A szám ragozott alakokat is tartalmaz, nem ennyi külön szótövet jelent.`:`Ebben a játékban ${fmt(words.length)} feladat szerepel. A kontextus és a megfigyelési szempont a feladat része; az azonos hiányos alakok más jelentéssel külön feladatok lehetnek.`;
+ $('bank-provenance').textContent=game.id==='massalhangzok'?originalProvenance:'Saját szerkesztésű, bővíthető kezdő feladatbank. A szabálymagyarázatok az AkH. 12. kiadására támaszkodnak. A feladatok mellett megoldás, magyarázat és – ahol szükséges – jelentés vagy szerkezeti támpont szerepel. A TXT-fájl önállóan is szerkeszthető.';
+ $('bank-download').href=game.bank;$('bank-download').textContent='A feladatbank letöltése (.txt) ↓';
+ $('game-select').value=game.id;$('test-game-name').textContent='Kiválasztott játék: '+game.name;
+ document.querySelectorAll('.label-title').forEach(b=>{b.addEventListener('mouseenter',()=>b.parentElement.classList.remove('suppressed'));b.addEventListener('focus',()=>b.parentElement.classList.remove('suppressed'));});
+ document.querySelectorAll('a[data-game-route]').forEach(a=>a.href=path(a.dataset.gameRoute));
+ updateAvailable();
+}
+function activateGame(id){
+ cancelDrag();game=GAMES.find(g=>g.id===id)||GAMES[0];words=game.id==='massalhangzok'?baseWords:bankData[game.id];allRules=[...game.rules,...(game.none?[game.none]:[])];ids=allRules.map(r=>r.id);practiceIds=[...ids];practiceCorrect=0;practiceTotal=0;streak=0;reviewAnswers=[];answers=[];mistakePractice=false;
+ $('test-error').textContent='';$('filter-error').textContent='';$('last-test').hidden=true;$('practice-filters').hidden=true;$('filter-toggle').setAttribute('aria-expanded','false');
+ renderShell();startPractice();
+}
+// Navigation and game choice share the same explicit, reloadable URLs.
+document.querySelectorAll('a').forEach(a=>{const view=a.getAttribute('href')?.slice(1);if(['gyakorlas','teszt','sugo'].includes(view))a.dataset.gameRoute=view;});
+$('game-select').innerHTML=GAMES.map(g=>`<option value="${g.id}">${esc(g.label.toLocaleUpperCase('hu-HU'))}</option>`).join('');
+$('game-select').addEventListener('change',()=>{const next=$('game-select').value;activateGame(next);location.hash=path('gyakorlas');route();});
+$('game-library').innerHTML=GAMES.map((g,i)=>{const count=g.id==='massalhangzok'?baseWords.length:bankData[g.id].length;return `<a class="library-card" href="#gyakorlas/${g.id}"><span class="library-no">0${i+1}</span><h2>${esc(g.name)}</h2><p>${esc(g.description)}</p><span class="library-meta">${fmt(count)} ${g.id==='massalhangzok'?'szóalak':'feladat'} <span aria-hidden="true">↗</span></span></a>`;}).join('');
 function selected(target){return Array.from($(target).querySelectorAll('input:checked'),e=>e.value);}
 function available(selectedIds){return words.filter(w=>w.answers.some(c=>selectedIds.includes(c))).length;}
-function updateAvailable(){const n=available(selected('test-categories'));$('available-count').textContent=`Ezekkel a beállításokkal ${fmt(n)} különböző szóalakból választhatsz (1–${fmt(n)} kérdés).`;$('question-count').max=n;}
-$('test-categories').addEventListener('change',updateAvailable);updateAvailable();
+function updateAvailable(){const n=available(selected('test-categories'));$('available-count').textContent=`Ezekkel a beállításokkal ${fmt(n)} különböző feladatból választhatsz (1–${fmt(n)} kérdés).`;$('question-count').max=n;}
+$('test-categories').addEventListener('change',updateAvailable);
 function startPractice(pool=words){mode='practice';position=0;answered=false;deck=GameCore.makeDeck(pool,practiceIds,pool.length);if(!deck.length){practiceIds=[...ids];deck=GameCore.makeDeck(pool,practiceIds,pool.length);}renderWord();}
 function renderWord(){
  cancelDrag();answered=false;
  const w=deck[position];if(!w)return;
  $('current-word').textContent=w.word;
+ $('task-context').textContent=w.context||'';$('task-context').hidden=!w.context;
+ $('word-stage').classList.toggle('has-context',Boolean(w.context));
+ game.rules.forEach(r=>{if(w.options){const symbol=document.querySelector(`[data-answer="${r.id}"] .box-symbol`);if(symbol)symbol.innerHTML=`<span class="choice-glyph letter-option">${esc(w.options[r.id])}</span>`;}});
  $('word-card').className='word-card';$('word-card').disabled=false;
  $('word-card').setAttribute('aria-label',`Aktuális szó: ${w.word}. Válassz egy dobozt vagy húzd bele a szót.`);
  $('feedback').hidden=true;$('feedback').textContent='';$('next').hidden=true;
@@ -44,16 +77,18 @@ function renderWord(){
  $('scores').hidden=isTest;$('test-progress').hidden=!isTest;$('progress-track').hidden=!isTest;$('skip').hidden=isTest;
  $('mode-label').textContent=isTest?'TESZT FOLYAMATBAN':mistakePractice?'HIBÁS SZAVAK GYAKORLÁSA':'SZABAD GYAKORLÁS';
  $('game-eyebrow').textContent=isTest?'02 / MOST RAJTAD A SOR':'01 / A SZÓ A TIÉD';
- $('game-title').innerHTML=isTest?'Most hallgasd.<br><span>Most már tudod.</span>':'Hallgasd fejben.<br><span>Tedd a helyére.</span>';
- $('filter-toggle').hidden=isTest;$('multi-note').textContent=isTest?'A teszt közben nem mutatjuk a megoldást. Egy szóért egy pont jár; több elfogadott kategóriánál bármelyik helyes válasz jó.':'Több törvényt is felismertél? Ha a szó több kategóriába tartozik, bármelyik helyes dobozt elfogadjuk.';
- if(isTest){$('test-progress').textContent=`${position+1} / ${deck.length} szó`;$('progress-fill').style.width=`${position/deck.length*100}%`;$('practice-filters').hidden=true;}
- document.querySelectorAll('[data-answer]').forEach(b=>{b.disabled=false;b.classList.remove('correct-answer','wrong-answer','selected-answer','drag-over');const state=b.querySelector('.box-state');if(state)state.textContent='';if(b.classList.contains('drop-box')){const r=rule(b.dataset.answer);b.setAttribute('aria-label',`${ids.indexOf(r.id)+1}. ${r.name}`);}});
- $('none-answer').hidden=!isTest&&!practiceIds.includes('none');
+ $('game-title').innerHTML=game.title.map((part,i)=>i?`<span>${esc(part)}</span>`:esc(part)+'<br>').join('');
+ $('game-prompt').textContent=game.prompt;
+ $('interaction-help').innerHTML=`vagy kattints egy dobozra · billentyűzet: <kbd>1</kbd>–<kbd>${ids.length}</kbd>`;
+ $('filter-toggle').hidden=isTest;$('multi-note').textContent=isTest?'A teszt közben nem mutatjuk a megoldást. Egy szóért egy pont jár; több elfogadott kategóriánál bármelyik helyes válasz jó.':game.id==='massalhangzok'?'Több törvényt is felismertél? Ha a szó több kategóriába tartozik, bármelyik helyes dobozt elfogadjuk.':'A jelentés és a megadott szempont is a feladat része. A megoldást a válaszod után mutatjuk.';
+ if(isTest){$('test-progress').textContent=`${position+1} / ${deck.length} feladat`;$('progress-fill').style.width=`${position/deck.length*100}%`;$('practice-filters').hidden=true;}
+ document.querySelectorAll('[data-answer]').forEach(b=>{b.disabled=false;b.classList.remove('correct-answer','wrong-answer','selected-answer','drag-over');const state=b.querySelector('.box-state');if(state)state.textContent='';if(b.classList.contains('drop-box')){const r=rule(b.dataset.answer);b.setAttribute('aria-label',`${ids.indexOf(r.id)+1}. ${r.name}${w.options?', '+w.options[r.id]+' betű':''}`);}});
+ $('none-answer').hidden=!game.none||(!isTest&&!practiceIds.includes('none'));
  document.querySelectorAll('.box-wrap').forEach(wrap=>{const active=isTest||practiceIds.includes(wrap.dataset.rule);wrap.hidden=!active;});
  $('correct-count').textContent=practiceCorrect;$('streak-count').textContent=streak;
 }
 function submit(answer){
- if(answered||!deck[position]||$('game-view').hidden)return;
+ if(answered||!deck[position]||$('game-view').hidden||!ids.includes(answer))return;
  if(mode==='practice'&&!practiceIds.includes(answer))return;
  answered=true;cancelDrag();const word=deck[position],correct=GameCore.grade(word,answer);
  const selectedButton=document.querySelector(`[data-answer="${answer}"]`);
@@ -70,12 +105,12 @@ function submit(answer){
   word.answers.forEach(id=>{const b=document.querySelector(`[data-answer="${id}"]`);if(!b)return;b.classList.add('correct-answer');const label=b.querySelector('.box-state');if(label)label.textContent='✓ HELYES';});
   const reason=word.explanations[correct?answer:word.answers[0]];
   $('feedback').className=`feedback ${correct?'good':'bad'}`;
-  $('feedback').innerHTML=`<strong>${correct?'Ez az, jó helyre került!':'Ezt most tegyük a helyére.'}</strong>${esc(reason)}${word.answers.length>1?`<br>Elfogadott kategóriák: ${word.answers.map(c=>esc(rule(c).name)).join(' · ')}.`:''} <a href="#szabaly-${word.answers[0]==='none'?'none':word.answers[0]}">Miért? ↗</a>`;
+  $('feedback').innerHTML=`<strong>${correct?'Ez az, jó helyre került!':'Ezt most tegyük a helyére.'}</strong>${esc(reason)}${word.answers.length>1?`<br>Elfogadott kategóriák: ${word.answers.map(c=>esc(rule(c).name)).join(' · ')}.`:''} <a href="${helpPath(word.answers[0])}">Miért? ↗</a>`;
  }
  $('feedback').hidden=false;$('skip').hidden=true;$('next').hidden=false;
  $('next').innerHTML=mode==='test'&&position===deck.length-1?'Mutasd az eredményt <span aria-hidden="true">↗</span>':'Következő szó <span aria-hidden="true">→</span>';
 }
-document.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>submit(b.dataset.answer)));
+$('game-view').addEventListener('click',e=>{const b=e.target.closest('[data-answer]');if(b&&!b.disabled)submit(b.dataset.answer);});
 $('next').addEventListener('click',()=>{
  if(!answered)return;
  if(mode==='test'&&position===deck.length-1){reviewAnswers=[...answers];showResults();return;}
@@ -90,7 +125,7 @@ $('test-form').addEventListener('submit',e=>{
  if(!cats.length){$('test-error').textContent='Válassz legalább egy kategóriát.';return;}
  if(!Number.isInteger(count)||count<1||count>max){$('test-error').textContent=`A kérdésszám 1 és ${max} közötti egész szám lehet.`;return;}
  $('test-error').textContent='';deck=GameCore.makeDeck(words,cats,count);position=0;answers=[];mode='test';mistakePractice=false;
- location.hash='teszt-folyamatban';route();renderWord();window.scrollTo({top:0,behavior:'instant'});announce(`${count} kérdéses teszt elindult.`);
+ location.hash=path('teszt-folyamatban');route();renderWord();window.scrollTo({top:0,behavior:'instant'});announce(`${count} kérdéses teszt elindult.`);
 });
 document.querySelectorAll('[data-count]').forEach(b=>b.addEventListener('click',()=>{$('question-count').value=b.dataset.count;document.querySelectorAll('[data-count]').forEach(x=>x.classList.toggle('chosen',x===b));}));
 $('question-count').addEventListener('input',()=>{document.querySelectorAll('[data-count]').forEach(b=>b.classList.toggle('chosen',b.dataset.count===$('question-count').value));});
@@ -99,41 +134,43 @@ function showResults(){
  $('result-caption').textContent=sum.percent===100?'Telitalálat! Minden szó a helyére került.':sum.percent>=70?'Sok minden megvan már. A bizonytalan szavakat még gyakoroljuk át.':'Minden körrel közelebb kerülsz. Nézzük meg a magyarázatokat, és próbáld újra!';
  $('retry-mistakes').hidden=sum.correct===sum.total;$('only-errors').checked=false;
  $('category-results').innerHTML=allRules.map(r=>{const matching=reviewAnswers.filter(a=>a.word.answers.includes(r.id));if(!matching.length)return '';return `<div class="category-result"><span>${esc(r.name)}</span><strong>${matching.filter(a=>a.correct).length} / ${matching.length}</strong></div>`;}).join('');
- renderReview();try{localStorage.setItem('mbetu-last-test',JSON.stringify({...sum,date:new Date().toISOString()}));}catch(_){}
- location.hash='eredmeny';route();window.scrollTo({top:0,behavior:'instant'});announce(`A teszt eredménye ${sum.percent} százalék, ${sum.correct} helyes válasz ${sum.total} szóból.`);
+ renderReview();try{localStorage.setItem('mbetu-last-test-'+game.id,JSON.stringify({...sum,date:new Date().toISOString()}));}catch(_){}
+ location.hash=path('eredmeny');route();window.scrollTo({top:0,behavior:'instant'});announce(`A teszt eredménye ${sum.percent} százalék, ${sum.correct} helyes válasz ${sum.total} szóból.`);
 }
 function renderReview(){
  const filtered=reviewAnswers.filter(a=>!$('only-errors').checked||!a.correct);
  $('answer-review').innerHTML=filtered.length?filtered.map(a=>{
  const index=reviewAnswers.indexOf(a)+1;
- return `<article class="review-item ${a.correct?'good':'bad'}"><div class="review-top"><h3>${esc(a.word.word)}</h3><span>${index}. SZÓ · ${a.correct?'✓ HELYES':'✕ JAVÍTANDÓ'}</span></div><p class="answer-label">A válaszod: <strong>${esc(rule(a.answer).name)}</strong></p><p>Elfogadott: <strong>${a.word.answers.map(c=>esc(rule(c).name)).join(' / ')}</strong></p>${a.word.answers.map(c=>`<p class="explanation">${esc(a.word.explanations[c])}</p>`).join('')}<a class="rule-link" href="#szabaly-${a.word.answers[0]}">Megnézem a szabályt ↗</a></article>`;
+ return `<article class="review-item ${a.correct?'good':'bad'}"><div class="review-top"><h3>${esc(a.word.word)}</h3><span>${index}. SZÓ · ${a.correct?'✓ HELYES':'✕ JAVÍTANDÓ'}</span></div>${a.word.context?`<p class="review-context">${esc(a.word.context)}</p>`:''}<p class="answer-label">A válaszod: <strong>${esc(rule(a.answer).name)}</strong></p><p>Elfogadott: <strong>${a.word.answers.map(c=>esc(rule(c).name)).join(' / ')}</strong></p>${a.word.answers.map(c=>`<p class="explanation">${esc(a.word.explanations[c])}</p>`).join('')}<a class="rule-link" href="${helpPath(a.word.answers[0])}">Megnézem a szabályt ↗</a></article>`;
  }).join(''):'<p class="empty-review">Nincs hibás válasz. Minden szó a helyére került!</p>';
 }
 $('only-errors').addEventListener('change',renderReview);
-$('retry-mistakes').addEventListener('click',()=>{const pool=reviewAnswers.filter(a=>!a.correct).map(a=>a.word);practiceIds=[...ids];document.querySelectorAll('#practice-categories input').forEach(c=>c.checked=true);mistakePractice=true;startPractice(pool);location.hash='gyakorlas';route();});
-$('export-results').addEventListener('click',()=>{const s=GameCore.summary(reviewAnswers);const lines=[`MBETŰ – Teszteredmény: ${s.correct}/${s.total} (${s.percent}%)`,'',...reviewAnswers.flatMap((a,i)=>[`${i+1}. ${a.word.word} – ${a.correct?'HELYES':'HIBÁS'}`,`Válasz: ${rule(a.answer).name}`,`Elfogadott: ${a.word.answers.map(c=>rule(c).name).join(' / ')}`,...a.word.answers.map(c=>a.word.explanations[c]),''])];download('mbetu-eredmeny.txt',lines.join('\n'));});
+$('retry-mistakes').addEventListener('click',()=>{const pool=reviewAnswers.filter(a=>!a.correct).map(a=>a.word);practiceIds=[...ids];document.querySelectorAll('#practice-categories input').forEach(c=>c.checked=true);mistakePractice=true;startPractice(pool);location.hash=path('gyakorlas');route();});
+$('export-results').addEventListener('click',()=>{const s=GameCore.summary(reviewAnswers);const lines=[`MBETŰ – ${game.name} – Teszteredmény: ${s.correct}/${s.total} (${s.percent}%)`,'',...reviewAnswers.flatMap((a,i)=>[`${i+1}. ${a.word.word} – ${a.correct?'HELYES':'HIBÁS'}`,`Kontextus: ${a.word.context||'–'}`,`Válasz: ${rule(a.answer).name}`,`Elfogadott: ${a.word.answers.map(c=>rule(c).name).join(' / ')}`,...a.word.answers.map(c=>a.word.explanations[c]),''])];download(`mbetu-${game.id}-eredmeny.txt`,lines.join('\n'));});
 function download(name,text){const url=URL.createObjectURL(new Blob(['\ufeff'+text],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function route(){
- cancelDrag();let hash=decodeURIComponent(location.hash.slice(1))||'gyakorlas';let view='game-view',nav='gyakorlas';
- if(hash==='teszt'){view='test-view';nav='teszt';try{const s=JSON.parse(localStorage.getItem('mbetu-last-test'));if(s&&Number.isInteger(s.total)&&s.total>0&&Number.isInteger(s.correct)&&Number.isInteger(s.percent)){$('last-test').textContent=`Legutóbbi teszted ezen az eszközön: ${s.correct}/${s.total} helyes válasz (${s.percent}%).`;$('last-test').hidden=false;}}catch(_){}}
+ cancelDrag();let raw=decodeURIComponent(location.hash.slice(1))||'gyakorlas';const parts=raw.split('/');let hash=parts[0];if(parts[1]&&parts[1]!==game.id&&GAMES.some(g=>g.id===parts[1]))activateGame(parts[1]);let view='game-view',nav='gyakorlas';
+ if(hash==='jatekok'){view='library-view';nav='jatekok';}
+ else if(hash==='teszt'){view='test-view';nav='teszt';try{$('last-test').hidden=true;const s=JSON.parse(localStorage.getItem('mbetu-last-test-'+game.id));if(s&&Number.isInteger(s.total)&&s.total>0&&Number.isInteger(s.correct)&&Number.isInteger(s.percent)){$('last-test').textContent=`Legutóbbi teszted ezen az eszközön: ${s.correct}/${s.total} helyes válasz (${s.percent}%).`;$('last-test').hidden=false;}}catch(_){}}
  else if(hash==='eredmeny'&&reviewAnswers.length){view='results-view';nav='teszt';}
  else if(hash==='sugo'||hash.startsWith('szabaly-')){view='help-view';nav='sugo';}
  else if(hash==='teszt-folyamatban'&&mode==='test'&&deck.length){nav='teszt';}
  else{if(mode!=='practice'){mistakePractice=false;startPractice();}hash='gyakorlas';}
- for(const id of ['game-view','test-view','results-view','help-view'])$(id).hidden=id!==view;
+ for(const id of ['game-view','test-view','results-view','help-view','library-view'])$(id).hidden=id!==view;
  document.querySelectorAll('[data-nav]').forEach(a=>{const active=a.dataset.nav===nav;a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
  if(hash.startsWith('szabaly-')){const target=hash==='szabaly-none'?document.querySelector('.help-extra'):$(hash);if(target)requestAnimationFrame(()=>target.scrollIntoView({behavior:'instant'}));}
  else window.scrollTo({top:0,behavior:'instant'});
- document.title=`MBETŰ — ${nav==='sugo'?'Szabálykönyv':nav==='teszt'?'Teszteld magad':'Hallgasd fejben. Tedd a helyére.'}`;
+ $('word-count').textContent=nav==='jatekok'?`${GAMES.length} JÁTÉK · ${fmt(baseWords.length+Object.values(bankData).reduce((n,rows)=>n+rows.length,0))} FELADAT / SZÓALAK`:`${fmt(words.length)} ${game.id==='massalhangzok'?'SZÓALAK':'FELADAT'} · ${game.rules.length} KATEGÓRIA`;
+ document.title=`MBETŰ — ${nav==='jatekok'?'Játéktár':game.name+(nav==='sugo'?' – Szabálykönyv':nav==='teszt'?' – Teszt':'')}`;
 }
 window.addEventListener('hashchange',route);
 document.addEventListener('keydown',e=>{
  if(e.key==='Escape'){cancelDrag();document.querySelectorAll('.box-label').forEach(l=>l.classList.add('suppressed'));return;}
  if($('game-view').hidden||e.ctrlKey||e.altKey||e.metaKey||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
- if(/^[1-7]$/.test(e.key)&&!answered){e.preventDefault();submit(ids[Number(e.key)-1]);}
+ if(/^[1-7]$/.test(e.key)&&Number(e.key)<=ids.length&&!answered){e.preventDefault();submit(ids[Number(e.key)-1]);}
  if(e.key==='Enter'&&answered&&e.target.tagName!=='BUTTON'&&e.target.tagName!=='A'){e.preventDefault();$('next').click();}
 });
-document.querySelectorAll('.label-title').forEach(b=>{b.addEventListener('mouseenter',()=>b.parentElement.classList.remove('suppressed'));b.addEventListener('focus',()=>b.parentElement.classList.remove('suppressed'));});
+
 function cancelDrag(){
  if(ghost)ghost.remove();ghost=null;drag=null;
  $('word-card').classList.remove('drag-source');document.querySelectorAll('.drag-over').forEach(b=>b.classList.remove('drag-over'));
@@ -156,5 +193,5 @@ card.addEventListener('pointerup',e=>{
  if(moved&&target&&!target.disabled)submit(target.dataset.answer);
 });
 card.addEventListener('pointercancel',cancelDrag);card.addEventListener('lostpointercapture',cancelDrag);window.addEventListener('blur',cancelDrag);
-startPractice();route();
+activateGame('massalhangzok');route();
 })();

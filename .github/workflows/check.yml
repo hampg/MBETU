@@ -17,5 +17,6 @@ jobs:
           python-version: '3.12'
       - run: python3 scripts/build.py
       - run: node tests/core.test.cjs
+      - run: node tests/games.test.cjs
       - run: python3 scripts/check_words.py
       - run: git diff --exit-code -- index.html

@@ -1,12 +1,25 @@
 # MBETŰ
 
-Magyar mássalhangzótörvények gyakorlása húzható szókártyával, hat dobozzal és egy „Nincs szabály” válasszal. Az Alon Peres-portfólió nagy tipográfiája és geometrikus formái ihlették; saját felület, saját kód és saját szerkesztésű szóbank.
+Hat magyar nyelvi játék: mássalhangzótörvények, helyesírási alapelvek, egybeírás, j/ly, hanghosszúság és hibakereső. Közös húzható szókártya, gyakorlás, teszt és részletes javítás. Az Alon Peres-portfólió nagy tipográfiája és geometrikus formái ihlették; saját felület, saját kód és saját szerkesztésű szóbank.
 
 **Élő játék:** https://hampg.github.io/MBETU/
 
+## Játékok és közvetlen címek
+
+| Játék | Kezdő bank | Cím |
+|---|---:|---|
+| Mássalhangzótörvények | 2572 szóalak | `#gyakorlas/massalhangzok` |
+| Helyesírási alapelvek | 80 feladat | `#gyakorlas/alapelvek` |
+| Egybe, külön, kötőjellel | 61 feladat | `#gyakorlas/egybeiras` |
+| J vagy ly? | 182 feladat | `#gyakorlas/jly` |
+| Rövid vagy hosszú? | 100 feladat | `#gyakorlas/hosszusag` |
+| Jó így? – Hibakereső | 241 feladat | `#gyakorlas/hibakereso` |
+
+A felső **Játékok** menü a `#jatekok` játéktárat nyitja meg. A gyakorló nézetben gyors játékválasztó is van. A teszt és a súgó mindig a kiválasztott játékhoz tartozik; a tesztek helyi összesítése játékonként külön tárolódik. Az új játékok összesen 664 feladatot tartalmaznak, többféle feladatban ugyanaz a szó is szerepelhet. Az új bankok dokumentációja: [data/README.md](data/README.md).
+
 ## Használat
 
-Nyisd meg az **index.html** fájlt bármelyik modern böngészőben. Egyetlen fájlban van minden, internetkapcsolat nélkül is működik. Nincs telepítés, külső betűtípus, CDN, mérőkód vagy szerveroldali adatkezelés. A szólista letöltési linkjéhez a mellette levő words.txt is szükséges.
+Nyisd meg az **index.html** fájlt bármelyik modern böngészőben. Egyetlen fájlban van minden, internetkapcsolat nélkül is működik. Nincs telepítés, külső betűtípus, CDN, mérőkód vagy szerveroldali adatkezelés. A szólista letöltési linkjéhez a mellette levő `words.txt`, illetve az új játékokhoz a `data/` alatti TXT-fájlok is szükségesek. Maga a játék ezek nélkül is működik, mert a bankok be vannak ágyazva.
 
 - Húzd a szót egy dobozba, vagy kattints/érints meg egy dobozt. Billentyűzet: **1–6** a szabályok, **7** a „Nincs szabály”.
 - A törvény nevére mutatva vagy billentyűzettel ráfókuszálva egymondatos súgó jelenik meg; Esc bezárja.
@@ -42,6 +55,7 @@ A `scripts/generate_words.py` a szerkesztői kiinduló lista generátora. A ját
 ```sh
 python3 scripts/build.py
 node tests/core.test.cjs
+node tests/games.test.cjs
 python3 scripts/check_words.py
 python3 -m http.server 4173
 ```

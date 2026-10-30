@@ -8,10 +8,10 @@ const GameCore=(()=>{
   while(result.length<count){let changed=false;
    for(const id of shuffle(ids,rng)){
     const pool=pools[id];
-    let index=pool.findIndex(w=>!used.has(w.word)&&!familyLast.has(w.family));
-    if(index<0)index=pool.findIndex(w=>!used.has(w.word));
+    let index=pool.findIndex(w=>!used.has(w.id||w.word)&&!familyLast.has(w.family));
+    if(index<0)index=pool.findIndex(w=>!used.has(w.id||w.word));
     if(index<0)continue;
-    const [word]=pool.splice(index,1);result.push(word);used.add(word.word);familyLast.add(word.family);changed=true;
+    const [word]=pool.splice(index,1);result.push(word);used.add(word.id||word.word);familyLast.add(word.family);changed=true;
     if(familyLast.size>14)familyLast.delete(familyLast.values().next().value);
     if(result.length===count)break;
    }
