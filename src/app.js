@@ -41,7 +41,7 @@ function renderShell(){
  document.querySelector('.help-lead').innerHTML=game.lead||originalLead;
  $('word-count').textContent=`${fmt(words.length)} ${game.id==='massalhangzok'?'SZÓALAK':'FELADAT'} · ${game.rules.length} KATEGÓRIA`;
  $('wordbank-detail').textContent=game.id==='massalhangzok'?`A szóbank ${fmt(words.length)} különböző szóalakot tartalmaz, ${fmt(new Set(words.map(w=>w.family)).size)} szócsaládba rendezve. A szám ragozott alakokat is tartalmaz, nem ennyi külön szótövet jelent.`:`Ebben a játékban ${fmt(words.length)} feladat szerepel. A kontextus és a megfigyelési szempont a feladat része; az azonos hiányos alakok más jelentéssel külön feladatok lehetnek.`;
- $('bank-provenance').textContent=game.id==='massalhangzok'?originalProvenance:'Saját szerkesztésű, bővíthető kezdő feladatbank. A szabálymagyarázatok az AkH. 12. kiadására támaszkodnak. A feladatok mellett megoldás, magyarázat és – ahol szükséges – jelentés vagy szerkezeti támpont szerepel. A TXT-fájl önállóan is szerkeszthető.';
+ $('bank-provenance').textContent=game.id==='massalhangzok'?originalProvenance:'Saját szerkesztésű, bővíthető feladatbank. A szabálymagyarázatok az AkH. 12. kiadására támaszkodnak. A feladatok mellett megoldás, magyarázat és – ahol szükséges – jelentés vagy szerkezeti támpont szerepel. A TXT-fájl önállóan is szerkeszthető.';
  $('bank-download').href=game.bank;$('bank-download').textContent='A feladatbank letöltése (.txt) ↓';
  $('game-select').value=game.id;$('test-game-name').textContent='Kiválasztott játék: '+game.name;
  document.querySelectorAll('.label-title').forEach(b=>{b.addEventListener('mouseenter',()=>b.parentElement.classList.remove('suppressed'));b.addEventListener('focus',()=>b.parentElement.classList.remove('suppressed'));});

@@ -9,13 +9,13 @@ Hat magyar nyelvi játék: mássalhangzótörvények, helyesírási alapelvek, e
 | Játék | Kezdő bank | Cím |
 |---|---:|---|
 | Mássalhangzótörvények | 2572 szóalak | `#gyakorlas/massalhangzok` |
-| Helyesírási alapelvek | 80 feladat | `#gyakorlas/alapelvek` |
-| Egybe, külön, kötőjellel | 61 feladat | `#gyakorlas/egybeiras` |
-| J vagy ly? | 182 feladat | `#gyakorlas/jly` |
-| Rövid vagy hosszú? | 100 feladat | `#gyakorlas/hosszusag` |
-| Jó így? – Hibakereső | 241 feladat | `#gyakorlas/hibakereso` |
+| Helyesírási alapelvek | 250 feladat | `#gyakorlas/alapelvek` |
+| Egybe, külön, kötőjellel | 350 feladat | `#gyakorlas/egybeiras` |
+| J vagy ly? | 400 feladat | `#gyakorlas/jly` |
+| Rövid vagy hosszú? | 350 feladat | `#gyakorlas/hosszusag` |
+| Jó így? – Hibakereső | 650 feladat | `#gyakorlas/hibakereso` |
 
-A felső **Játékok** menü a `#jatekok` játéktárat nyitja meg. A gyakorló nézetben gyors játékválasztó is van. A teszt és a súgó mindig a kiválasztott játékhoz tartozik; a tesztek helyi összesítése játékonként külön tárolódik. Az új játékok összesen 664 feladatot tartalmaznak, többféle feladatban ugyanaz a szó is szerepelhet. Az új bankok dokumentációja: [data/README.md](data/README.md).
+A felső **Játékok** menü a `#jatekok` játéktárat nyitja meg. A gyakorló nézetben gyors játékválasztó is van. A teszt és a súgó mindig a kiválasztott játékhoz tartozik; a tesztek helyi összesítése játékonként külön tárolódik. Az új játékok összesen 2000 feladatot tartalmaznak, többféle feladatban ugyanaz a szó is szerepelhet. Az új bankok dokumentációja: [data/README.md](data/README.md).
 
 ## Használat
 

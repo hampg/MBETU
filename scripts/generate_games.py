@@ -1,4 +1,4 @@
-"""Saját szerkesztésű kezdő feladatbankok az öt helyesírási játékhoz.
+"""Saját szerkesztésű feladatbankok az öt helyesírási játékhoz.
 A változatok helyett önálló, ellenőrizhető példák; minden tételhez javítás jár.
 """
 from pathlib import Path
@@ -218,6 +218,9 @@ for i,r in enumerate(banks['hosszusag']):
     for word,answer in [(sol,'correct'),(wrong,'fix')]:
         if any(x['word']==word for x in banks['hibakereso']):continue
         add('hibakereso',word,answer,f'A megadott jelentéshez tartozó helyes alak: {sol}. A célbetű {right}; a másik hosszúság ebben a feladatban nem megfelelő.',sol,r['context'],sol)
+# Bővített, szerkesztett készlet és kiegyensúlyozott hibakereső.
+from expanded_content import expand_all
+expand_all(banks,add)
 for game,rows in banks.items():
     lines=['# MBETŰ – '+game+'; UTF-8 TSV; saját szerkesztés', '# feladat\tválaszok_JSON\tmagyarázatok_JSON\tszócsalád\tmegoldás\tkontextus\tbetűválaszték_JSON']
     for r in rows:lines.append('\t'.join([r['word'],json.dumps(r['answers'],ensure_ascii=False),json.dumps(r['explanations'],ensure_ascii=False),r['family'],r['solution'],r['context'],json.dumps(r.get('options',{}),ensure_ascii=False)]))
